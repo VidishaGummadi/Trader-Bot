@@ -833,3 +833,9 @@ class Bittrex(object):
         }, options={
             'marketName': market, 'tickInterval': tick_interval
         }, protection=PROTECTION_PUB)
+def main():
+    bit=Bittrex(None,None)
+    import json
+    print json.dumps(bit.get_markets(),indent=4)
+if __name__ == '__main__':
+    main()
